@@ -70,4 +70,18 @@ public class Chapter1Tests {
     static void tearDownAll() {
         // System.out.println("清理資料");
     }
+
+    @DisplayName("判斷質數")
+    @Test
+    void testPrimes(){
+        Thread thread1 = new Thread(new Prime1("Prime1", 100000, 1000000, 100000));
+        Thread thread2 = new Thread(new Prime2("Prime2", 100000, 1000000, 100000));
+        Thread thread3 = new Thread(new Prime3("Prime3", 100000, 1000000, 100000));
+
+        thread1.start();
+        thread2.start();
+        thread3.start();
+
+        String end = "";
+    }
 }
