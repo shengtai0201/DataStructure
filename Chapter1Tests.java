@@ -74,9 +74,9 @@ public class Chapter1Tests {
     @DisplayName("判斷質數")
     @Test
     void testPrimes(){
-        Thread thread1 = new Thread(new Prime1("Prime1", 100000, 1000000, 100000));
-        Thread thread2 = new Thread(new Prime2("Prime2", 100000, 1000000, 100000));
-        Thread thread3 = new Thread(new Prime3("Prime3", 100000, 1000000, 100000));
+        Thread thread1 = new Thread(new Prime1("Prime1", 1000000, 10000000, 100000));
+        Thread thread2 = new Thread(new Prime2("Prime2", 1000000, 10000000, 100000));
+        Thread thread3 = new Thread(new Prime3("Prime3", 1000000, 10000000, 100000));
 
         thread1.start();
         thread2.start();
